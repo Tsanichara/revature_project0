@@ -18,7 +18,7 @@ public class ProductDAO {
     public void insertProduct(Product p){
 
         try {
-            PreparedStatement ps = conn.prepareStatement("INSERT INTO Product (productId, productName, productPrice) values (?, ?, ?");
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO Product (productId, productName, productPrice) values (?, ?, ?)");
             ps.setInt(1, p.getProductId());
             ps.setString(2, p.getProductName());
             ps.setInt(3, p.getProductPrice());

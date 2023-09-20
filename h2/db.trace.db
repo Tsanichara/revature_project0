@@ -4,3 +4,22 @@ org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "--h2 is 
 --first, drop your tables (to reset your database for testing)
 --then create your tables
 afdbfdb [42001-214]
+2023-09-20 16:24:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000aCREATE TABLE Customer(\000d\000aid INT PRIMARY KEY,\000d\000af_name varchar(100)\000d\000a)\000d\000a\000d\000a\000d\000a[*]CREATE TABLE Product(\000d\000aproductId INT PRIMARY KEY,\000d\000aproductName varchar(150),\000d\000aproductPrice INT\000d\000a)\000d\000a\000d\000a"; SQL statement:
+
+CREATE TABLE Customer(
+id INT PRIMARY KEY,
+f_name varchar(100)
+)
+
+
+CREATE TABLE Product(
+productId INT PRIMARY KEY,
+productName varchar(150),
+productPrice INT
+)
+
+ [42000-214]
+2023-09-20 16:55:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO Product (productId, productName, productPrice) values (?, ?, ?[*]"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ,, )"; SQL statement:
+INSERT INTO Product (productId, productName, productPrice) values (?, ?, ? [42001-214]
