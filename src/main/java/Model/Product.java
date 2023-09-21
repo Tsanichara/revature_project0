@@ -1,11 +1,19 @@
 package Model;
 
+
 import java.util.Objects;
 
 public class Product {
+
     int productId;
+
     String productName;
+
     int productPrice;
+
+
+    public Product() {
+    }
 
     public Product(int productId, String productName, int productPrice) {
         this.productId = productId;

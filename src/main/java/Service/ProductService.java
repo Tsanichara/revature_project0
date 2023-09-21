@@ -3,6 +3,8 @@ package Service;
 import DAO.ProductDAO;
 import Model.Product;
 
+import java.util.List;
+
 public class ProductService {
     ProductDAO productDAO;
 
@@ -14,12 +16,16 @@ public class ProductService {
         productDAO.insertProduct(p);
     }
 
-    public void deleteProduct(String productName){
-        productDAO.deleteProduct(productName);
+    public void deleteProduct(int productId){
+        productDAO.deleteProduct(productId);
 
     }
 
-    public String getProductNameById(int id){
+    public Product getProductNameById(int id){
         return productDAO.getProductById(id);
+    }
+
+    public List<Product> getAllProducts(){
+       return productDAO.getAllProducts();
     }
 }

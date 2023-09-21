@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductDAO {
     private Connection conn;
@@ -30,23 +32,27 @@ public class ProductDAO {
 
     }
 
-    public void deleteProduct(String productName){
+    public void deleteProduct(int productId){
         try{
-            PreparedStatement ps = conn.prepareStatement("DELETE FROM product where productName = ?");
-            ps.setString(1, productName);
+            PreparedStatement ps = conn.prepareStatement("DELETE FROM product where productId = ?");
+            ps.setInt(1, productId);
             ps.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();
         }
     }
 
-    public String getProductById(int id){
+    public Product getProductById(int id){
         try{
-            PreparedStatement ps = conn.prepareStatement("SELECT productName from Product where productId =  ?");
+            PreparedStatement ps = conn.prepareStatement("SELECT * from Product where productId =  ?");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                return rs.getString("productName");
+                int prodId = rs.getInt("productId");
+                String prodName = rs.getString("productName");
+                int prodPrice = rs.getInt("productPrice");
+                Product dbProduct = new Product(prodId, prodName, prodPrice);
+                return dbProduct;
             }
 
         } catch(SQLException e){
@@ -55,5 +61,25 @@ public class ProductDAO {
         return null;
     }
 
+    public List<Product> getAllProducts(){
+        List<Product> products = new ArrayList<>();
+
+        try{
+            String sql = "SELECT * FROM Product";
+
+            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while(rs.next()){
+                Product product = new Product(rs.getInt("productId"), rs.getString("productName"), rs.getInt("productPrice"));
+
+                products.add(product);
+            }
+
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return products;
+    }
 
 }
