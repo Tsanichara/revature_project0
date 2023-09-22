@@ -6,9 +6,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 public class CustomerDAO {
     Connection conn;
-
 
 
     public CustomerDAO(Connection conn) {
@@ -17,23 +18,43 @@ public class CustomerDAO {
 
 
 
-    public int getCustomerId(String f_name) {
+    public Customer getCustomerId(int id) {
 
         try {
-            PreparedStatement ps = conn.prepareStatement("select id from Customer where Customer.f_name = ? ");
-            ps.setString(1, f_name);
+            PreparedStatement ps = conn.prepareStatement("select * from Customer where id = ? ");
+            ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if(rs.next()) {
-                int name = rs.getInt("id");
-                return name;
+                int ido = rs.getInt("id");
+                String name = rs.getString("f_name");
+                Customer customer = new Customer(ido, name);
+                return customer;
             }
         }catch(SQLException e) {
             e.printStackTrace();
         }
-        return 0;
+        return null;
     }
 
-    public String insertCustomer(Customer cus) {
+    public List<Customer> getAllCustomer() {
+        List<Customer> customerList = new ArrayList<>();
+        try {
+            PreparedStatement ps = conn.prepareStatement("select * from Customer");
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("f_name");
+                Customer newCus = new Customer(id,name);
+                customerList.add(newCus);
+
+            }
+        }catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return customerList;
+    }
+
+    public void insertCustomer(Customer cus) {
         try{
             PreparedStatement ps = conn.prepareStatement("insert into Customer (id,f_name) values (?, ?)");
             ps.setInt(1, cus.getId());
@@ -43,7 +64,6 @@ public class CustomerDAO {
             e.printStackTrace();
         }
 
-        return null;
     }
 
     public void deleteCustomer(int id) {

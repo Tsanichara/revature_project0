@@ -1,6 +1,7 @@
 package Controller;
 
 import DAO.OrderDAO;
+import Model.Customer;
 import Model.Order;
 import Model.Product;
 import Service.CustomerService;
@@ -36,6 +37,10 @@ public class Controller {
         app.get("/Orders/{order_id}", this::getOrderByIdHandler);
         app.delete("/Orders/{order_id}", this::deleteOrderHandler);
         app.post("/Orders", this::postOrderHandler);
+        app.post("/customer", this::addCustomerHandler);
+        app.delete("/customer/{id}", this::deleteCustomerHandler);
+        app.get("/customer/{id}", this::getCustomerIdHandler);
+        app.get("/customer", this::getAllCustmer);
 
         return app;
     }
@@ -114,5 +119,26 @@ public class Controller {
             ctx.json(deletedOrder);
         }
     }
+    public void getAllCustmer(Context context) {
+        context.json(customerService.getAllCustomer());
+    }
+
+    public void deleteCustomerHandler(Context context) {
+        int id = Integer.parseInt(context.pathParam("id"));
+        customerService.deleteCustomer(id);
+    }
+
+    public void getCustomerIdHandler(Context context) {
+        int id = Integer.parseInt(context.pathParam("id"));
+        Customer c = customerService.getCustomerId(id);
+        context.json(c);
+    }
+    private void addCustomerHandler(Context context) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        Customer customer = mapper.readValue(context.body(),Customer.class);
+        customerService.addCustomer(customer);
+        context.status(201);
+    }
+
 
 }

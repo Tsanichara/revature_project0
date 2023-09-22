@@ -3,6 +3,8 @@ package Service;
 import DAO.CustomerDAO;
 import Model.Customer;
 
+import java.util.List;
+
 public class CustomerService {
     CustomerDAO customerDAO;
 
@@ -12,8 +14,11 @@ public class CustomerService {
 
 
     public void addCustomer(Customer con) {
-
         customerDAO.insertCustomer(con);
+    }
+
+    public List<Customer> getAllCustomer() {
+        return   customerDAO.getAllCustomer();
     }
 
 
@@ -21,8 +26,8 @@ public class CustomerService {
         customerDAO.deleteCustomer(id);
     }
 
-    public int getCustomerId(String name) {
-        int num =  customerDAO.getCustomerId(name);
+    public Customer getCustomerId(int id) {
+        Customer num =  customerDAO.getCustomerId(id);
         return num;
     }
 }
