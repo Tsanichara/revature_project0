@@ -62,4 +62,15 @@ public class ProductDAOTest {
         Product p4actual = productDAO.getProductById(4);
         Assert.assertEquals(p4expected, p4actual);
     }
+
+    @Test
+    public void updateProductTest(){
+        Product updatedProduct = new Product(1, "Tomato", 2);
+        productDAO.updateProduct(1, updatedProduct);
+
+        Product updatedProductExpected = updatedProduct;
+        Product updatedProductActual = productDAO.getProductById(1);
+        Assert.assertEquals(updatedProductExpected, updatedProductActual);
+
+    }
 }

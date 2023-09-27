@@ -10,14 +10,14 @@ import Util.ConnectionSingleton;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.internal.matchers.Or;
 
 import java.sql.Connection;
 import java.util.List;
 public class OrderDAOTest {
     Connection conn;
     OrderDAO orderDAO;
-    CustomerDAO customerDAO;
-    ProductDAO productDAO;
+
 
 
     @Before
@@ -25,8 +25,7 @@ public class OrderDAOTest {
 
         conn = ConnectionSingleton.getConnection();
         ConnectionSingleton.resetTestDatabase();
-        customerDAO = new CustomerDAO(conn);
-        productDAO = new ProductDAO(conn);
+
         orderDAO = new OrderDAO(conn);
 
     }
@@ -56,6 +55,23 @@ public class OrderDAOTest {
 
         }
 
+    }
+
+    @Test
+    public void insertOrderTest(){
+        Order o4 = new Order(6,2, 1);
+        orderDAO.insertOrder(o4);
+        Order o4expected = new Order(6,2,1);
+        Order o4actual = orderDAO.getOrderById(6);
+        Assert.assertEquals(o4expected, o4actual);
+    }
+
+    @Test
+    public void deleteOrderTest(){
+        Order o4 = new Order(6,2, 1);
+        orderDAO.insertOrder(o4);
+        orderDAO.deleteOrderById(6);
+        Assert.assertNull(orderDAO.getOrderById(6));
     }
 
 }

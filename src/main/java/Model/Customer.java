@@ -6,6 +6,10 @@ public class Customer {
     int id;
     String f_name;
 
+    public Customer(){
+
+    }
+
 
     public Customer(int id, String f_name) {
         this.id = id;

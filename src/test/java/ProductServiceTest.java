@@ -31,4 +31,25 @@ public class ProductServiceTest {
         Assert.assertEquals(allProducts, productService.getAllProducts());
     }
 
+    @Test
+    public void getProductByIdServiceTest(){
+        Product newProduct = new Product(10, "Shoes", 22);
+
+        Mockito.when(mockProductDAO.getProductById(newProduct.getProductId())).thenReturn(newProduct);
+        Product product = mockProductDAO.getProductById(10);
+        Assert.assertEquals(newProduct, product);
+    }
+
+    @Test
+    public void addProductServiceTest(){
+        Product newProduct = new Product(10,"Shoes", 22);
+        Product persistedProduct = new Product(10, "Shoes", 22);
+        Mockito.when(mockProductDAO.getProductById(newProduct.getProductId())).thenReturn(persistedProduct);
+
+        productService.addProduct(newProduct);
+        Assert.assertEquals(newProduct, productService.getProductNameById(10));
+    }
+
+
+
 }

@@ -32,4 +32,24 @@ public class OrderServiceTest {
         Mockito.when(mockOrderDAO.getAllOrders()).thenReturn(allOrders);
         Assert.assertEquals(allOrders, orderService.getAllOrders());
     }
+
+    @Test
+    public void getOrderByIdServiceTest(){
+        Order newOrder = new Order(5, 1, 2);
+        Mockito.when(mockOrderDAO.getOrderById(newOrder.getOrder_id())).thenReturn(newOrder);
+
+        Order order = mockOrderDAO.getOrderById(5);
+        Assert.assertEquals(newOrder, order);
+    }
+
+    @Test
+    public void addOrderServiceTest(){
+        Order newOrder = new Order(5, 1, 2);
+        Order persistedOrder = new Order(5, 1, 2);
+        Mockito.when(mockOrderDAO.getOrderById(newOrder.getOrder_id())).thenReturn(persistedOrder);
+
+        orderService.addOrder(newOrder);
+        Assert.assertEquals(newOrder, orderService.getOrderById(5));
+
+    }
 }
