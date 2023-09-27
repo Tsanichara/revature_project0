@@ -34,7 +34,7 @@ public class ProductDAO {
 
     public void deleteProduct(int productId){
         try{
-            PreparedStatement ps = conn.prepareStatement("DELETE FROM product where productId = ?");
+            PreparedStatement ps = conn.prepareStatement("DELETE FROM Product where productId = ?");
             ps.setInt(1, productId);
             ps.executeUpdate();
         }catch(SQLException e){
@@ -80,6 +80,23 @@ public class ProductDAO {
             System.out.println(e.getMessage());
         }
         return products;
+    }
+
+    public void updateProduct(int id, Product product){
+
+        try{
+            String sql = "Update Product SET productName = ?, productPrice = ? WHERE productId = ?";
+            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+
+            preparedStatement.setString(1, product.getProductName());
+            preparedStatement.setInt(2, product.getProductPrice());
+            preparedStatement.setInt(3, id);
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }

@@ -28,4 +28,14 @@ public class ProductService {
     public List<Product> getAllProducts(){
        return productDAO.getAllProducts();
     }
+
+    public Product updateProduct(int id, Product product){
+        if (productDAO.getProductById(id) == null){
+            return null;
+        } else{
+            productDAO.updateProduct(id, product);
+            return productDAO.getProductById(id);
+        }
+    }
 }
+

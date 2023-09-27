@@ -32,4 +32,6 @@ INSERT INTO Customer (id, f_name) VALUES (1, 'John Doe');
 INSERT INTO Customer (id, f_name) VALUES (2, 'Random Person');
 
 INSERT INTO Orders (order_id, customer_id, product_id) VALUES (1234, 1, 3);
+INSERT INTO Orders (order_id, customer_id, product_id) VALUES (1111, 2, 1);
+INSERT INTO Orders (order_id, customer_id, product_id) VALUES (2222, 2, 2);
 

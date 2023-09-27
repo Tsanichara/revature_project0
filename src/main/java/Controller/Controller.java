@@ -33,6 +33,7 @@ public class Controller {
         app.get("/product/{id}", this::getProductByIdHandler);
         app.get("/product", this::getAllProductsHandler);
         app.delete("/product/{id}", this::deleteProductByIdHandler);
+        app.patch("/product/{id}", this::updateProductHandler);
         app.get("/Orders", this::getAllOrdersHandler);
         app.get("/Orders/{order_id}", this::getOrderByIdHandler);
         app.delete("/Orders/{order_id}", this::deleteOrderHandler);
@@ -72,6 +73,20 @@ public class Controller {
             ctx.status(200);
         } else{
             ctx.json(deletedProduct);
+        }
+    }
+
+    private void updateProductHandler(Context ctx) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        Product product = mapper.readValue(ctx.body(), Product.class);
+        int id = Integer.parseInt(ctx.pathParam("id"));
+
+        Product updatedProduct = productService.updateProduct(id, product);
+
+        if((updatedProduct == null)){
+            ctx.status(400);
+        } else {
+            ctx.json(mapper.writeValueAsString(updatedProduct));
         }
     }
 
