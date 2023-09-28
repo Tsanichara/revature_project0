@@ -21,6 +21,9 @@ public class OrderServiceTest {
         orderService = new OrderService(mockOrderDAO);
     }
 
+    /**
+     * This is a unit test to test if the getAllOrders method of the Service layer is working correctly.
+     */
     @Test
     public void getAllOrdersTest(){
         List<Order> allOrders = new ArrayList<>();
@@ -33,6 +36,9 @@ public class OrderServiceTest {
         Assert.assertEquals(allOrders, orderService.getAllOrders());
     }
 
+    /**
+     * This is a unit test to test if the getOrderById method of the Service layer is working correctly.
+     */
     @Test
     public void getOrderByIdServiceTest(){
         Order newOrder = new Order(5, 1, 2);
@@ -42,6 +48,9 @@ public class OrderServiceTest {
         Assert.assertEquals(newOrder, order);
     }
 
+    /**
+     * This is a unit test to test if the addOrder method of the Service layer is working correctly.
+     */
     @Test
     public void addOrderServiceTest(){
         Order newOrder = new Order(5, 1, 2);

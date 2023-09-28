@@ -16,7 +16,11 @@ public class CustomerDAO {
         this.conn = conn;
     }
 
-
+    /**
+     * The getCustomerId method retrieves customer record by querying the darabase with the use of its ID.
+     * @param id
+     * @return
+     */
 
     public Customer getCustomerId(int id) {
 
@@ -36,6 +40,11 @@ public class CustomerDAO {
         return null;
     }
 
+    /**
+     * The getallCustomer method retrieves all customer record from the database
+     * @return
+     */
+
     public List<Customer> getAllCustomer() {
         List<Customer> customerList = new ArrayList<>();
         try {
@@ -54,6 +63,10 @@ public class CustomerDAO {
         return customerList;
     }
 
+    /**
+     * The insertCustomer method inserts a new customer record into the database.
+     * @param cus
+     */
     public void insertCustomer(Customer cus) {
         try{
             PreparedStatement ps = conn.prepareStatement("insert into Customer (id,f_name) values (?, ?)");
@@ -66,12 +79,32 @@ public class CustomerDAO {
 
     }
 
+    /**
+     * The deleteCustomer method deletes a customer record from the database using it's ID.
+     * @param id
+     */
     public void deleteCustomer(int id) {
         try{
             PreparedStatement ps = conn.prepareStatement("delete from Customer where Customer.id = ?" );
             ps.setInt(1, id);
             ps.executeUpdate();
         }catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * The updatecustomerById method updates a customer record in the database using it's ID.
+     * @param id
+     * @param customer
+     */
+    public void updateCustomerById(int id,Customer customer) {
+        try {
+            PreparedStatement ps = conn.prepareStatement("update Customer set f_name = ? where id = ?");
+            ps.setString(1,customer.getF_name());
+            ps.setInt(2,id);
+            ps.executeUpdate();
+        }catch(SQLException e) {
             e.printStackTrace();
         }
     }

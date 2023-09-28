@@ -11,7 +11,9 @@ public class Product {
 
     int productPrice;
 
-
+    /**
+     * Several constructors are here that can be used to initialize a new Product object.
+     */
     public Product() {
     }
 
@@ -21,6 +23,10 @@ public class Product {
         this.productPrice = productPrice;
     }
 
+    /**
+     *
+     * Getters and setters are defined here in order to interact with each data variable for a Product object.
+     */
     public int getProductId() {
         return productId;
     }

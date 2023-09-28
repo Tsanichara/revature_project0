@@ -25,6 +25,10 @@ public class Controller {
         this.orderService = orderService;
     }
 
+    /**
+     *
+     * Here all the endpoints are defined for each method.
+     */
     public Javalin getAPI() {
         Javalin app = Javalin.create();
 
@@ -42,12 +46,13 @@ public class Controller {
         app.delete("/customer/{id}", this::deleteCustomerHandler);
         app.get("/customer/{id}", this::getCustomerIdHandler);
         app.get("/customer", this::getAllCustmer);
+        app.put("/customer/{id}", this::updateCustomerByIdHandler);
 
         return app;
     }
 
     /**
-     * This is an example handler for an example endpoint.
+     * Here all the handlers for each endpoint are defined.
      * @param context The Javalin Context object manages information about both the HTTP request and response.
      */
     private void postProductHandler(Context context) throws JsonProcessingException {
@@ -154,6 +159,27 @@ public class Controller {
         customerService.addCustomer(customer);
         context.status(201);
     }
+
+    /**
+     * The updateCustomerByidHandler method accepts a context as parameter and maps the in coming json
+     * into an object and updates the customer records by passing the ID and customer object into the
+     * updatecustomerById method in the customer service.
+     * @param context
+     */
+    public void updateCustomerByIdHandler(Context context) {
+        try {
+            ObjectMapper om = new ObjectMapper();
+            Customer customer =  om.readValue(context.body(), Customer.class);
+            int id = Integer.parseInt(context.pathParam("id"));
+            customerService.updateCustomerById(id,customer);
+            context.status(201);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            context.status(400);
+        }
+    }
+
+
 
 
 }

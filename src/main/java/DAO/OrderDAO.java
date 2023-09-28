@@ -10,10 +10,17 @@ public class OrderDAO {
 
     private Connection conn;
 
+    /**
+     * Here a connection to the database is established
+     */
+
     public OrderDAO(Connection conn){
         this.conn = conn;
     }
 
+    /**
+     * The insertOrder method allows you to insert a new Order object into the Orders table.
+     */
     public Order insertOrder(Order order){
 
         try{
@@ -40,6 +47,11 @@ public class OrderDAO {
         return null;
     }
 
+    /**
+     *
+     * The getAllOrders method retrieves all records from the Orders table.
+     */
+
     public List<Order> getAllOrders(){
         List<Order> orders = new ArrayList<>();
 
@@ -61,6 +73,10 @@ public class OrderDAO {
 
         return orders;
     }
+
+    /**
+     * The getOrderById method retrieves a specific order from the Orders table using the id as a parameter.
+     */
 
     public Order getOrderById(int id){
 
@@ -84,6 +100,11 @@ public class OrderDAO {
 
         return null;
     }
+
+    /**
+     *
+     * The deleteOrderById method allows you to delete an order from the Orders table.
+     */
 
     public void deleteOrderById(int id){
 

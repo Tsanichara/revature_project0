@@ -20,6 +20,9 @@ public class ProductServiceTest {
         productService = new ProductService(mockProductDAO);
 
     }
+    /**
+     * This is a unit test to test if the getAllProducts method of the Service layer is working correctly.
+     */
     @Test
     public void getAllProductsServiceTest(){
         List<Product> allProducts = new ArrayList<>();
@@ -31,6 +34,9 @@ public class ProductServiceTest {
         Assert.assertEquals(allProducts, productService.getAllProducts());
     }
 
+    /**
+     * This is a unit test to test if the getProductById method of the Service layer is working correctly.
+     */
     @Test
     public void getProductByIdServiceTest(){
         Product newProduct = new Product(10, "Shoes", 22);
@@ -40,6 +46,10 @@ public class ProductServiceTest {
         Assert.assertEquals(newProduct, product);
     }
 
+
+    /**
+     * This is a unit test to test if the addProduct method of the Service layer is working correctly.
+     */
     @Test
     public void addProductServiceTest(){
         Product newProduct = new Product(10,"Shoes", 22);

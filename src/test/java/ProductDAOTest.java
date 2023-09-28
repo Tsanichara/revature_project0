@@ -11,13 +11,19 @@ import java.util.List;
 public class ProductDAOTest {
     Connection conn;
     ProductDAO productDAO;
+
+    /**
+     * Before each unit test a connection to the database is established and the test database is reset.
+     */
     @Before
     public void setUp(){
         conn = ConnectionSingleton.getConnection();
         ConnectionSingleton.resetTestDatabase();
         productDAO = new ProductDAO(conn);
     }
-
+    /**
+     * This tests if the getAllProducts method is working properly.
+     */
     @Test
     public void getAllProductsTest(){
         List<Product> allProducts = productDAO.getAllProducts();
@@ -33,7 +39,9 @@ public class ProductDAOTest {
         Assert.assertTrue(allProducts.contains(p3));
 
     }
-
+    /**
+     * This tests if the getProductById method is working properly.
+     */
     @Test
     public void getProductByIdTest(){
         Product product = productDAO.getProductById(1);
@@ -44,7 +52,9 @@ public class ProductDAOTest {
             Assert.assertTrue(product.equals(p1));
         }
     }
-
+    /**
+     * This tests if the deleteProduct method is working properly.
+     */
     @Test
     public void deleteProductTest(){
         Product p4 = new Product(4, "Shirt", 20);
@@ -53,7 +63,9 @@ public class ProductDAOTest {
         Assert.assertNull(productDAO.getProductById(4));
 
     }
-
+    /**
+     * This tests if the insertProduct method is working properly.
+     */
     @Test
     public void insertProductTest(){
         Product p4 = new Product(4, "Shirt", 20);
@@ -62,7 +74,9 @@ public class ProductDAOTest {
         Product p4actual = productDAO.getProductById(4);
         Assert.assertEquals(p4expected, p4actual);
     }
-
+    /**
+     * This tests if the updateProduct method is working properly.
+     */
     @Test
     public void updateProductTest(){
         Product updatedProduct = new Product(1, "Tomato", 2);

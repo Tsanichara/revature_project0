@@ -28,8 +28,12 @@ INSERT INTO Product (productId, productName, productPrice) VALUES (1, 'Apple', 5
 INSERT INTO Product (productId, productName, productPrice) VALUES (2,  'Chair', 40);
 INSERT INTO Product (productId, productName, productPrice) VALUES (3, 'TV', 200);
 
-INSERT INTO Customer (id, f_name) VALUES (1, 'John Doe');
-INSERT INTO Customer (id, f_name) VALUES (2, 'Random Person');
+insert into Customer (id, f_name ) values (1, 'Calum Smith' );
+insert into Customer (id, f_name ) values (2, 'John Doe' );
+insert into Customer (id, f_name) values (3, 'Dave Reuben' );
+insert into Customer (id, f_name) values (4, 'Mic Jagger' );
+
+INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person');
 
 INSERT INTO Orders (order_id, customer_id, product_id) VALUES (1234, 1, 3);
 INSERT INTO Orders (order_id, customer_id, product_id) VALUES (1111, 2, 1);

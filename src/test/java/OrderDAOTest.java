@@ -19,7 +19,9 @@ public class OrderDAOTest {
     OrderDAO orderDAO;
 
 
-
+    /**
+     * Before each unit test a connection to the database is established and the test database is reset.
+     */
     @Before
     public void setUp(){
 
@@ -30,6 +32,10 @@ public class OrderDAOTest {
 
     }
 
+
+    /**
+     * This is a unit test to test if the getAllOrders method of the DAO layer is working correctly.
+     */
     @Test
     public void getAllOrdersTest(){
         List<Order> allOrders = orderDAO.getAllOrders();
@@ -43,7 +49,9 @@ public class OrderDAOTest {
         Assert.assertTrue(allOrders.contains(o2));
         Assert.assertTrue(allOrders.contains(o3));
     }
-
+    /**
+     * This is a unit test to test if the getOrderById method of the DAO layer is working correctly.
+     */
     @Test
     public void getOrderByIdTest(){
         Order order = orderDAO.getOrderById(1234);
@@ -56,7 +64,9 @@ public class OrderDAOTest {
         }
 
     }
-
+    /**
+     * This is a unit test to test if the insertOrder method of the DAO layer is working correctly.
+     */
     @Test
     public void insertOrderTest(){
         Order o4 = new Order(6,2, 1);
@@ -66,6 +76,9 @@ public class OrderDAOTest {
         Assert.assertEquals(o4expected, o4actual);
     }
 
+    /**
+     * This is a unit test to test if the deleteOrder method of the DAO layer is working correctly.
+     */
     @Test
     public void deleteOrderTest(){
         Order o4 = new Order(6,2, 1);

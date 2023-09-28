@@ -17,6 +17,11 @@ public class ProductDAO {
 
     }
 
+    /**
+     *
+     * The insertProduct method allows you to insert a new product into the Products table.
+     */
+
     public void insertProduct(Product p){
 
         try {
@@ -32,6 +37,11 @@ public class ProductDAO {
 
     }
 
+    /**
+     *
+     * The deleteProduct method allows you to delete a product from the Products table.
+     */
+
     public void deleteProduct(int productId){
         try{
             PreparedStatement ps = conn.prepareStatement("DELETE FROM Product where productId = ?");
@@ -41,6 +51,10 @@ public class ProductDAO {
             e.printStackTrace();
         }
     }
+
+    /**
+     * the getProductById method allows you to retrieve a single product from the Product table using an id.
+     */
 
     public Product getProductById(int id){
         try{
@@ -60,6 +74,11 @@ public class ProductDAO {
         }
         return null;
     }
+
+    /**
+     *
+     * The getAllProducts method allows you to retrieve all products from the Products table.
+     */
 
     public List<Product> getAllProducts(){
         List<Product> products = new ArrayList<>();
@@ -81,6 +100,10 @@ public class ProductDAO {
         }
         return products;
     }
+
+    /**
+     * the updateProduct method allows you to update an existing product within the Products table.
+     */
 
     public void updateProduct(int id, Product product){
 

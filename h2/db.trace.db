@@ -1435,3 +1435,163 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Tsani/r
 	at org.h2.mvstore.FileStore.open(FileStore.java:128)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
 	... 51 more
+2023-09-28 15:26:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:26:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:26:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:26:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:26:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:26:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:26:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:26:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:26:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:26:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:29:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:29:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:29:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:29:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:29:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:29:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:29:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:29:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:29:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:29:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+INSERT INTO Customer (id, f_name) VALUES (5, 'John Doe') [42000-214]
+2023-09-28 15:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+
+INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person') [42000-214]
+2023-09-28 15:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+
+INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person') [42000-214]
+2023-09-28 15:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+
+INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person') [42000-214]
+2023-09-28 15:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+
+INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person') [42000-214]
+2023-09-28 15:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+
+INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person') [42000-214]
+2023-09-28 15:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+
+INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person') [42000-214]
+2023-09-28 15:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+
+INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person') [42000-214]
+2023-09-28 15:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+
+INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person') [42000-214]
+2023-09-28 15:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+
+INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person') [42000-214]
+2023-09-28 15:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000ainsert into Customer (id, f_name) values (4, 'Mic Jagger' )\000d\000a\000d\000a[*]INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person')"; SQL statement:
+
+insert into Customer (id, f_name) values (4, 'Mic Jagger' )
+
+INSERT INTO Customer (id, f_name) VALUES (6, 'Random Person') [42000-214]

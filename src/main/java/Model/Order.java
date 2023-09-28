@@ -7,6 +7,9 @@ public class Order {
     int customer_id;
     int product_id;
 
+    /**
+     * Several different constructors with different parameters are listed here in order to initialize a new Order object.
+     */
     public Order(int order_id, int customer_id, int product_id) {
         this.order_id = order_id;
         this.customer_id = customer_id;
@@ -20,6 +23,11 @@ public class Order {
 
     public Order() {
     }
+
+    /**
+     * These are getter and setter methods to interact with each data variable in an Order object.
+     *
+     */
 
     public int getOrder_id() {
         return order_id;
