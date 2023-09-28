@@ -80,9 +80,9 @@ public class CustomerDAOTest {
      */
     @Test
     public void customerDAO_CheckingIfACustomerIsDeleted() {
-        Customer customer = new Customer(1, "dave");
+        Customer customer = new Customer(5, "dave");
         customerDAO.insertCustomer(customer);
-        customerDAO.deleteCustomer(1);
+        customerDAO.deleteCustomer(5);
         List<Customer> allCustomeer = customerDAO.getAllCustomer();
         Assert.assertFalse(allCustomeer.contains(customer));
     }
