@@ -161,9 +161,9 @@ public class Controller {
     }
 
     /**
-     * The updateCustomerByidHandler method accepts a context as parameter and maps the in coming json
+     * The updateCustomerByIdHandler method accepts a context as parameter and maps the in coming json
      * into an object and updates the customer records by passing the ID and customer object into the
-     * updatecustomerById method in the customer service.
+     * updateCustomerById method in the customer service.
      * @param context
      */
     public void updateCustomerByIdHandler(Context context) {
